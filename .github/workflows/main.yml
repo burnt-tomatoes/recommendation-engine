@@ -1,0 +1,21 @@
+name: Regular releases
+
+on:
+  schedule: 
+    - cron: 42 3 * * * 
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          date +%s > $GITHUB_WORKSPACE/version.txt
+      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: ncipollo/release-action@v1
+        with:
+          tag: "v0.${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }}"
