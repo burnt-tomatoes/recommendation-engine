@@ -1,4 +1,4 @@
-name: Regular releases
+name: Regular release
 
 on:
   schedule: 
