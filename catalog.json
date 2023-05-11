@@ -1,0 +1,12 @@
+{
+  "name": "Recommendation engine",
+  "description": "Not everyone knows what tomatoes they like. This tool recommends the best tomatoes with the best kind of burning for their specific needs. Released as a tool regularly that gets used by the website.",
+  "type": "Library",
+  "priority": 8,
+  "meta": {
+    "github_url": "https://github.com/burnt-tomatoes/recommendation-engine",
+    "slack_channel": "#recommendation-team",
+    "releases": "https://github.com/burnt-tomatoes/recommendation-engine/releases/"
+  },
+  "events": ["releases"]
+}
